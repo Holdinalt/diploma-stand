@@ -9,6 +9,9 @@ import {
 import BackgroundChange from "./components/ModalPage";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavigationPage from "./components/NavigationPage";
+import FormPage from "./components/FormPage";
+import CartPage from "./components/CartPage";
+import CarouselPage from "./components/CarouselPage";
 
 
 const router = createBrowserRouter([
@@ -37,6 +40,18 @@ const router = createBrowserRouter([
     {
         path: "footer",
         element: <NavigationPage />,
+    },
+    {
+        path: "form",
+        element: <FormPage />,
+    },
+    {
+        path: "cart",
+        element: <CartPage />,
+    },
+    {
+        path: "carousel",
+        element: <CarouselPage />,
     },
 ]);
 
