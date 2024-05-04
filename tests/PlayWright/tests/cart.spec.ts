@@ -30,8 +30,20 @@ test('some in cart', async ({ page }) => {
 
     await page.getByTestId('cart-page-button').click();
     const cartList = page.getByTestId('cart-list');
-    const cards = cartList.locator('[name="cart-item"]')
+    const cards = cartList.locator('[nacme="cart-item"]')
 
     await expect(cards).toHaveCount(2)
     await expect(page.getByTestId('cart-total-number')).toHaveText('$150')
+});
+
+test('card screen check', async ({ page }) => {
+    await expect(page.getByTestId('card-1')).toHaveScreenshot();
+});
+
+test('cart screen check', async ({ page }) => {
+    await page.getByTestId('card-1').getByRole("button").click()
+
+    await page.getByTestId('cart-page-button').click();
+
+    await expect(page.getByTestId('cart-list')).toHaveScreenshot();
 });
