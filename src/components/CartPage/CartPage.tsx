@@ -18,7 +18,7 @@ export const CartPage = () => {
         }
     ]
 
-    const [cards, setCards] = useState<CardType[]>(INITIAL_CARDS);
+    const [cards, setCards] = useState<CardType[]>([]);
     const [isCardsPage, setIsCardsPage] = useState(true);
     
     const addToCart = useCallback(
@@ -39,12 +39,12 @@ export const CartPage = () => {
     return (
         <>
             <div style={{display: "flex", flexDirection: "row", gap: 20, marginBottom: 100}}>
-                <Button onClick={() => setIsCardsPage(true)}>Cards</Button>
-                <Button onClick={() => setIsCardsPage(false)}>Cart</Button>
+                <Button onClick={() => setIsCardsPage(true)} data-testid={'cards-page-button'}>Cards</Button>
+                <Button onClick={() => setIsCardsPage(false)} data-testid={'cart-page-button'}>Cart</Button>
             </div>
 
             {isCardsPage
-                ? <CardsComponent cards={cards} addFunction={addToCart}/>
+                ? <CardsComponent cards={INITIAL_CARDS} addFunction={addToCart}/>
                 : <CartComponent cards={cards} deleteFunction={deleteFromCart}/>}
         </>
     )

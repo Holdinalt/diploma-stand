@@ -5,15 +5,16 @@ interface ComponentProps {
     cards: CardType[];
     deleteFunction: (card: CardType) => void
 }
-export const CartComponent = ({cards, deleteFunction}: ComponentProps) => {
+export const CartComponent = ({cards}: ComponentProps) => {
     return (
         <>
             <h1>Cart</h1>
 
-            <ListGroup>
+            <ListGroup data-testid={'cart-list'}>
                 {cards.map(card => {
                     return (
-                        <ListGroup.Item>
+                        // @ts-ignore
+                        <ListGroup.Item name={'cart-item'}>
                             {`${card.name}`}
                             <Badge bg="primary" pill>
                                ${card.price}
@@ -21,9 +22,9 @@ export const CartComponent = ({cards, deleteFunction}: ComponentProps) => {
                         </ListGroup.Item>
                     )
                 })}
-                <ListGroup.Item>
+                <ListGroup.Item data-testid={'cart-total'}>
                     Total
-                    <Badge bg="primary" pill>
+                    <Badge bg="primary" pill data-testid={'cart-total-number'}>
                         ${cards.reduce((prev, curr) => prev + curr.price, 0)}
                     </Badge>
                 </ListGroup.Item>

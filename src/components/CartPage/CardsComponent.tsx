@@ -7,7 +7,8 @@ interface ComponentProps {
 }
 
 export const CardsComponent = ({
-    cards
+    cards,
+    addFunction
 }: ComponentProps) => {
     return (
         <>
@@ -15,14 +16,14 @@ export const CardsComponent = ({
 
             <div>
                 {cards.map(card => {
-                    return (<Card style={{width: '18rem'}}>
+                    return (<Card style={{width: '18rem'}} data-testid={`card-${card.id}`}>
                         <Card.Img variant="top"/>
                         <Card.Body>
                             <Card.Title>{card.name}</Card.Title>
                             <Card.Text>
                                 {`price: ${card.price}$`}
                             </Card.Text>
-                            <Button variant="primary">Add To Card</Button>
+                            <Button variant="primary" onClick={() => addFunction(card)}>Add To Card</Button>
                         </Card.Body>
                     </Card>)
                 })}

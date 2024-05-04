@@ -1,4 +1,5 @@
 import {Button, Modal} from "react-bootstrap";
+import "./modal-styles.css"
 
 interface ModalProps {
     isVisible: boolean;
@@ -12,16 +13,16 @@ export const ModalComponent = ({
 
     if(isVisible){
         return (
-            <Modal show={isVisible} onHide={onClose}>
+            <Modal show={isVisible} onHide={onClose} data-testid={'modal'} style={{padding: 20}}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Modal heading</Modal.Title>
+                    <Modal.Title data-testid={'modal-title'}>Modal heading</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
+                <Modal.Body data-testid={'modal-body'}>Woohoo, you are reading this text in a modal!</Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={onClose}>
+                    <Button variant="secondary" onClick={onClose} data-testid={'modal-close'}>
                         Close
                     </Button>
-                    <Button variant="primary" onClick={onClose}>
+                    <Button variant="primary" onClick={onClose} data-testid={'modal-accept'}>
                         Save Changes
                     </Button>
                 </Modal.Footer>
