@@ -4,7 +4,7 @@ const VALID_EMAIL = 'email@mail.ru'
 const INVALID_EMAIL = 'email'
 const VALID_PASSWORD = '123qwery'
 const INVALID_PASSWORD = '123'
-describe('footer', function() {
+describe('form', function() {
 
     beforeEach(browser => browser.navigateTo(`${standURL}/form`));
 

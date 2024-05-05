@@ -1,6 +1,6 @@
 const standURL = 'http://localhost:3000'
 
-describe('footer', function() {
+describe('modal', function() {
 
     beforeEach(browser => browser.navigateTo(`${standURL}/modal`));
 
