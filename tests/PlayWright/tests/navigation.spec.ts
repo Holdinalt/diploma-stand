@@ -1,7 +1,5 @@
 import {expect, test} from "@playwright/test";
-import {getOrigin, standURL} from "../../utlis";
-
-const VALID_URL = 'https://ya.ru'
+import {getOrigin, standURL, VALID_URL} from "../../utlis";
 
 test.beforeEach(async ({ page }) => {
     await page.goto(`${standURL}/footer`);

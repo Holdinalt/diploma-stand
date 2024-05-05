@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/**/node_modules
 /.pnp
 .pnp.js
 
@@ -21,3 +22,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+/tests/Nightwatch/node_modules/
+/tests/PlayWright/node_modules/
+/tests/Cy/node_modules/*
+/tests/Nightwatch/tests_output/*
+/tests/Nightwatch/vrt
+/tests/Nightwatch/vrt-report

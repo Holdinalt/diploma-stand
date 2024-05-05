@@ -1,7 +1,7 @@
 import {Button, Container, Row} from "react-bootstrap";
 
 export const NavigationPage = () => {
-    const link = 'https://ya.ru/';
+    const link = 'https://playwright.dev/';
 
     const navigate = (url: string, newPage = false) => {
         if(newPage){
