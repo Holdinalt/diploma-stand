@@ -11,3 +11,6 @@ export const getOrigin = (urlStr: string) => {
     const url = new URL(urlStr);
     return url.origin;
 }
+
+export const SPEED_ANS = 'Hello World!'
+export const SPEED_URL = 'file:///F:/projects/web/diploma-stand/src/static/hello_world.html'
