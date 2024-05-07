@@ -10,5 +10,10 @@
   "devDependencies": {
     "@nightwatch/vrt": "^3.5.1",
     "nightwatch": "^3.6.1"
+  },
+  "dependencies": {
+    "@nightwatch/react": "^3.1.1",
+    "react": "^18.3.1",
+    "vite-plugin-nightwatch": "^0.4.6"
   }
 }

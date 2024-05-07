@@ -26,7 +26,11 @@ module.exports = {
   custom_assertions_path: ['nightwatch/custom-assertions'],
 
   // See https://nightwatchjs.org/guide/extending-nightwatch/adding-plugins.html
-  plugins: ['@nightwatch/vrt'],
+  plugins: [
+      '@nightwatch/vrt',
+      // 'vite-plugin-nightwatch',
+      '@nightwatch/react'
+  ],
   
   // See https://nightwatchjs.org/guide/concepts/test-globals.html
   globals_path: '',
