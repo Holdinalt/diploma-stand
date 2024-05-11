@@ -1,4 +1,5 @@
 import {defineConfig, devices, PlaywrightTestConfig} from '@playwright/experimental-ct-react';
+import react from '@vitejs/plugin-react';
 
 /**
  * See https://playwright.dev/docs/test-configuration.
@@ -34,6 +35,13 @@ export default defineConfig<PlaywrightTestConfig>({
     ctPort: 3100,
 
     ctViteConfig: {
+      plugins: [react()],
+      build: {
+        // it actually frees some memory that vite needs a lot
+        // https://github.com/storybookjs/builder-vite/issues/409#issuecomment-1152848986
+        sourcemap: false,
+        minify: false,
+      },
       define: {
         "process.env": process.env,
       },
