@@ -1,8 +1,8 @@
 import {expect, test} from "@playwright/experimental-ct-react";
-import {getOrigin, standURL, VALID_URL} from "../../utlis";
+import {getOrigin, VALID_URL} from "../../utlis";
 
 test.beforeEach(async ({ page }) => {
-    await page.goto(`${standURL}/footer`);
+    await page.goto(`/footer`);
 })
 test('Check Button 1', async ({ page }) => {
     const button = page.getByTestId('button-1');

@@ -28,6 +28,8 @@ export default defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
 
+    baseURL: process.env.CI ? 'https://holdinalt.github.io/diploma-stand/' : 'http://localhost:3000',
+
     /* Port to use for Playwright component endpoint. */
     ctPort: 3100,
   },

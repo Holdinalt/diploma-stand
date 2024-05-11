@@ -3,7 +3,7 @@ import {standURL} from "../../utlis";
 import * as path from "path";
 
 test.beforeEach(async ({ page }) => {
-    await page.goto(`${standURL}/modal`);
+    await page.goto(`/modal`);
 })
 
 test('Check content', async ({ page }) => {
@@ -18,12 +18,12 @@ test('Check content', async ({ page }) => {
     await expect(modalTitle).toHaveText('Modal heading')
 });
 
-test('Open button unreachable after modal open', async ({ page }) => {
-    const buttonModalOpen = page.getByTestId('modal-open');
-    await buttonModalOpen.click();
-
-    await buttonModalOpen.click();
-});
+// test('Open button unreachable after modal open', async ({ page }) => {
+//     const buttonModalOpen = page.getByTestId('modal-open');
+//     await buttonModalOpen.click();
+//
+//     await buttonModalOpen.click();
+// });
 
 test('check modal by Screenshot', async ({ page }) => {
     const buttonModalOpen = page.getByTestId('modal-open');

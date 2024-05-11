@@ -1,8 +1,7 @@
 import {expect, test} from "@playwright/experimental-ct-react";
-import {standURL} from "../../utlis";
 
 test.beforeEach(async ({ page }) => {
-    await page.goto(`${standURL}/carousel`);
+    await page.goto(`/carousel`);
 })
 
 test('carousel check', async ({ page }) => {

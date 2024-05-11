@@ -1,8 +1,8 @@
 import {expect, test} from "@playwright/experimental-ct-react";
-import {INVALID_EMAIL, INVALID_PASSWORD, standURL, VALID_EMAIL, VALID_PASSWORD} from "../../utlis";
+import {INVALID_EMAIL, INVALID_PASSWORD, VALID_EMAIL, VALID_PASSWORD} from "../../utlis";
 
 test.beforeEach(async ({ page }) => {
-    await page.goto(`${standURL}/form`);
+    await page.goto(`/form`);
 })
 
 test('valid data', async ({ page }) => {
