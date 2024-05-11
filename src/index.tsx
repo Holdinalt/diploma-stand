@@ -16,7 +16,7 @@ import CarouselPage from "./components/CarouselPage";
 
 const router = createBrowserRouter([
     {
-        path: "/",
+        path: "diploma-stand",
         element: (
             <div style={{display: "flex", flexDirection: "column", gap: 10, margin: 20}}>
                 <h1>Choose the page</h1>
@@ -29,23 +29,23 @@ const router = createBrowserRouter([
         ),
     },
     {
-        path: "modal",
+        path: "diploma-stand/modal",
         element: <BackgroundChange />,
     },
     {
-        path: "footer",
+        path: "diploma-stand/footer",
         element: <NavigationPage />,
     },
     {
-        path: "form",
+        path: "diploma-stand/form",
         element: <FormPage />,
     },
     {
-        path: "cart",
+        path: "diploma-stand/cart",
         element: <CartPage />,
     },
     {
-        path: "carousel",
+        path: "diploma-stand/carousel",
         element: <CarouselPage />,
     },
 ]);
