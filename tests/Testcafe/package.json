@@ -8,6 +8,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "testcafe": "^3.6.0"
+    "testcafe": "^3.6.0",
+    "bootstrap": "^5.3.3"
   }
 }
