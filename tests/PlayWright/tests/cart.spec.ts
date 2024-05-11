@@ -1,7 +1,7 @@
 import {expect, test} from "@playwright/experimental-ct-react";
 
 test.beforeEach(async ({ page }) => {
-    await page.goto(`/cart`);
+    await page.goto(`/diploma-stand/cart`);
 })
 
 test('cart is empty', async ({ page }) => {

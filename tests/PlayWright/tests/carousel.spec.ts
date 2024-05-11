@@ -1,7 +1,7 @@
 import {expect, test} from "@playwright/experimental-ct-react";
 
 test.beforeEach(async ({ page }) => {
-    await page.goto(`/carousel`);
+    await page.goto(`/diploma-stand/carousel`);
 })
 
 test('carousel check', async ({ page }) => {

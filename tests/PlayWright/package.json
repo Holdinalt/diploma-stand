@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test-ct": "playwright test -c playwright-ct.config.ts carousel.spec.ts cart.spec.ts form.spec.ts modal.spec.ts navigation.spec.ts button.spec.tsx"
+    "test-ct": "playwright test -c playwright-ct.config.ts carousel.spec.ts cart.spec.ts form.spec.ts modal.spec.ts navigation.spec.ts button.spec.tsx",
+    "test-ui": "playwright test -c playwright-ct.config.ts --ui"
   },
   "keywords": [],
   "author": "",

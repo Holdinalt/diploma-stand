@@ -2,7 +2,7 @@ import {expect, test} from "@playwright/experimental-ct-react";
 import {INVALID_EMAIL, INVALID_PASSWORD, VALID_EMAIL, VALID_PASSWORD} from "../../utlis";
 
 test.beforeEach(async ({ page }) => {
-    await page.goto(`/form`);
+    await page.goto(`/diploma-stand/form`);
 })
 
 test('valid data', async ({ page }) => {

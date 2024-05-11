@@ -1,9 +1,8 @@
 import {expect, test} from "@playwright/experimental-ct-react";
-import {standURL} from "../../utlis";
 import * as path from "path";
 
 test.beforeEach(async ({ page }) => {
-    await page.goto(`/modal`);
+    await page.goto(`/diploma-stand/modal`);
 })
 
 test('Check content', async ({ page }) => {
@@ -34,7 +33,7 @@ test('check modal by Screenshot', async ({ page }) => {
 });
 
 test('check modal by Screenshot with flex negative', async ({ page }) => {
-    await page.goto(`${standURL}/modal?flex=true`);
+    await page.goto(`/diploma-stand/modal?flex=true`);
     const buttonModalOpen = page.getByTestId('modal-open');
     await buttonModalOpen.click();
 
