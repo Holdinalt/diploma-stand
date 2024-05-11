@@ -47,7 +47,7 @@ jobs:
         with:
           node-version: 18
       - name: cd
-        run: cd /tests/PlayWright
+        run: cd tests/PlayWright
       - name: Install dependencies
         run: npm ci
       - name: Install Playwright Browsers
