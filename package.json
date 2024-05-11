@@ -1,6 +1,7 @@
 {
   "name": "diploma-stand",
   "version": "0.1.0",
+  "homepage": "https://holdinalt.github.io/diploma-stand",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -21,13 +22,13 @@
     "web-vitals": "^2.1.4",
     "yup": "^1.4.0"
   },
-  "homepage": "https://holdinalt.github.io/diploma-stand/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "gh-pages:404": "cp build/index.html build/404.html",
     "test-cypress": "cd tests/Cypress",
     "test-nightwatch": "cd tests/Nightwatch",
     "test-testcafe": "cd tests/Testcafe"
