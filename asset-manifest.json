@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/diploma-stand/static/css/main.e210296b.css",
+    "main.js": "/diploma-stand/static/js/main.2931fcc7.js",
+    "index.html": "/diploma-stand/index.html",
+    "main.e210296b.css.map": "/diploma-stand/static/css/main.e210296b.css.map",
+    "main.2931fcc7.js.map": "/diploma-stand/static/js/main.2931fcc7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e210296b.css",
+    "static/js/main.2931fcc7.js"
+  ]
+}
