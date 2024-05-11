@@ -46,13 +46,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 18
-      - name: cd
-        run: cd tests/PlayWright
       - name: Install dependencies
+        working-directory: 'tests/PlayWright'
         run: npm ci
       - name: Install Playwright Browsers
+        working-directory: 'tests/PlayWright'
         run: npx playwright install --with-deps
       - name: Run Playwright tests
+        working-directory: 'tests/PlayWright'
         run: npm run test-ct
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}

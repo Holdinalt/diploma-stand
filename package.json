@@ -29,7 +29,6 @@
     "gh-pages:404": "cp build/index.html build/404.html",
     "test-cypress": "cd tests/Cypress",
     "test-nightwatch": "cd tests/Nightwatch",
-    "test-playwright": "cd tests/PlayWright",
     "test-testcafe": "cd tests/Testcafe"
   },
   "eslintConfig": {
