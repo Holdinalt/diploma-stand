@@ -1,5 +1,5 @@
 import {expect, test} from "@playwright/experimental-ct-react";
-import {SPEED_ANS} from "../../utlis";
+import {SPEED_ANS} from "../../../utlis";
 
 for (let i = 0; i < 100; i++) {
     test(`Check Hello World Number ${i}`, async ({ page }) => {

@@ -18,18 +18,13 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: (
-            <div>
-                <h1>Hello World</h1>
-                <Link to="about">About Us</Link>
-            </div>
-        ),
-    },
-    {
-        path: "about",
-        element: (
-            <div>
-                <h1>We are</h1>
-                <Link to="/">Home</Link>
+            <div style={{display: "flex", flexDirection: "column", gap: 10, margin: 20}}>
+                <h1>Choose the page</h1>
+                <Link to="modal">Modal</Link>
+                <Link to="footer">Navigation</Link>
+                <Link to="form">Form</Link>
+                <Link to="cart">Cart</Link>
+                <Link to="carousel">Carousel</Link>
             </div>
         ),
     },

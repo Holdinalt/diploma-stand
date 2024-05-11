@@ -1,4 +1,4 @@
-import {expect, test} from "@playwright/test";
+import {expect, test} from "@playwright/experimental-ct-react";
 import {standURL} from "../../utlis";
 import * as path from "path";
 
