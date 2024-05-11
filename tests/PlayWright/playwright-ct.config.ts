@@ -1,9 +1,9 @@
-import { defineConfig, devices } from '@playwright/experimental-ct-react';
+import {defineConfig, devices, PlaywrightTestConfig} from '@playwright/experimental-ct-react';
 
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
-export default defineConfig({
+export default defineConfig<PlaywrightTestConfig>({
 
   snapshotPathTemplate: '{testDir}/__screenshots__/{testFilePath}/{arg}{ext}',
 
@@ -32,6 +32,12 @@ export default defineConfig({
 
     /* Port to use for Playwright component endpoint. */
     ctPort: 3100,
+
+    ctViteConfig: {
+      define: {
+        "process.env": process.env,
+      },
+    },
   },
 
   /* Configure projects for major browsers */
