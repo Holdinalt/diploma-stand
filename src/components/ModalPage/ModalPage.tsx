@@ -15,7 +15,7 @@ function makeRandomString(length: number) {
 }
 
 export const ModalPage = () => {
-    const [randomString, setRandomString] = useState(makeRandomString(100))
+    const [randomString] = useState(makeRandomString(100))
 
     const [isModalVisible, setIsModalVisible] = useState(false);
 
