@@ -32,7 +32,7 @@ jobs:
         run: npx playwright install --with-deps
       - name: Run Playwright tests
         working-directory: 'tests/PlayWright'
-        run: npm run test-ct
+        run: npm run test-ct-without-comp
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
