@@ -21,6 +21,7 @@
     "web-vitals": "^2.1.4",
     "yup": "^1.4.0"
   },
+  "homepage": "https://holdinalt.github.io/diploma-stand/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
