@@ -1,4 +1,4 @@
-export const standURL = process.env.CI ? 'https://holdinalt.github.io/diploma-stand/' : 'http://localhost:3000/diploma-stand/'
+export const standURL = process.env.CI ? 'https://holdinalt.github.io/diploma-stand' : 'http://localhost:3000/diploma-stand'
 
 export const VALID_URL = 'https://playwright.dev/'
 
