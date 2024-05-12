@@ -1,4 +1,4 @@
-import {standURL} from "../../../utlis";
+import {standURL} from "../../utils";
 
 describe('modal', () => {
     beforeEach(() => {

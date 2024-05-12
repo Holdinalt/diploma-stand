@@ -1,4 +1,4 @@
-import {INVALID_EMAIL, INVALID_PASSWORD, standURL, VALID_EMAIL, VALID_PASSWORD} from "../../../utlis";
+import {INVALID_EMAIL, INVALID_PASSWORD, standURL, VALID_EMAIL, VALID_PASSWORD} from "../../utils";
 
 describe('form', () => {
     beforeEach(() => {

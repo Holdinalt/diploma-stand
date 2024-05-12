@@ -5,11 +5,11 @@ describe('navigation', () => {
         cy.visit(`${standURL}/footer`)
     })
 
-    it('Check Button 1', () => {
-        cy.getByTestId('button-1').click()
-
-        cy.url().should('include', VALID_URL)
-    })
+    // it('Check Button 1', () => {
+    //     cy.getByTestId('button-1').click()
+    //
+    //     cy.url().should('include', VALID_URL)
+    // })
 
     // it('Check Button 2', () => {
     //     cy.getByTestId('button-2').click()

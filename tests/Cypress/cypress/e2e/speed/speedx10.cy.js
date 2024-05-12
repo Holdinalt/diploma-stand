@@ -1,4 +1,4 @@
-import {SPEED_ANS} from "../../../../utlis";
+import {SPEED_ANS} from "../../../utils";
 
 describe('speed', () => {
 
