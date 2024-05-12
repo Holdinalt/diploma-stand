@@ -8,18 +8,6 @@ describe('navigation', () => {
     it('Check Button 1', () => {
         cy.getByTestId('button-1').click()
 
-        // cy.url().then(urlString => {
-        //     expect(urlString).include(VALID_URL)
-        // })
-
-        // cy.location('pathname', {timeout: 10000}).should('include', VALID_URL)
-
-        // cy.location().should(location => {
-        //     location.origin.startsWith(VALID_URL)
-        // })
-
-        // expect(cy.).to.eq(VALID_URL)
-
         cy.url().should('include', VALID_URL)
     })
 

@@ -1,8 +1,8 @@
-import {SPEED_ANS} from "../../../utlis";
+import {SPEED_ANS} from "../../../../utlis";
 
 describe('speed', () => {
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 100; i++) {
         it(`Check Hello World Number ${i}`, () => {
             cy.visit('../hello_world.html')
 

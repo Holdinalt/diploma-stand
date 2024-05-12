@@ -18,6 +18,8 @@ jobs:
     permissions:
       pages: write
       id-token: write
+    env:
+      working-directory: 'tests/PlayWright'
 #    needs: [deploy]
     steps:
       - uses: actions/checkout@v4
@@ -25,13 +27,10 @@ jobs:
         with:
           node-version: 18
       - name: Install dependencies
-        working-directory: 'tests/PlayWright'
         run: npm ci
       - name: Install Playwright Browsers
-        working-directory: 'tests/PlayWright'
         run: npx playwright install --with-deps chromium
       - name: Run Playwright tests
-        working-directory: 'tests/PlayWright'
         run: npm run test-ct-without-comp
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
@@ -39,5 +38,26 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 30
+
+  run-Cypress:
+    runs-on: ubuntu-latest
+    env:
+      working-directory: 'tests/Cypress'
+    name: E2E on Chrome
+    steps:
+      - uses: actions/checkout@v4
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        with:
+          browser: chrome
+          spec: |
+            cypress/e2e/carousel.cy.js
+            cypress/e2e/cart.cy.js
+            cypress/e2e/form.cy.js
+            cypress/e2e/modal.cy.js
+            cypress/e2e/navigation.cy.js
+            cypress/component/button.cy.js
+          config-file: cypress.config.js
+          
 
 

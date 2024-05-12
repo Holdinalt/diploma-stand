@@ -1,4 +1,4 @@
-export const standURL = 'http://localhost:3000'
+export const standURL = 'http://localhost:3000/diploma-stand'
 
 export const VALID_URL = 'https://playwright.dev/'
 
