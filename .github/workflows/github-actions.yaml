@@ -18,8 +18,9 @@ jobs:
     permissions:
       pages: write
       id-token: write
-    env:
-      working-directory: 'tests/PlayWright'
+    defaults:
+      run:
+        working-directory: 'tests/PlayWright'
 #    needs: [deploy]
     steps:
       - uses: actions/checkout@v4
@@ -41,8 +42,9 @@ jobs:
 
   run-Cypress:
     runs-on: ubuntu-latest
-    env:
-      working-directory: 'tests/Cypress'
+    defaults:
+      run:
+        working-directory: 'tests/Cypress'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
