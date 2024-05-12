@@ -1,4 +1,4 @@
-import {SPEED_ANS} from "../../../utils";
+import {SPEED_ANS} from "../../../utils.mjs";
 
 describe('speed', () => {
 

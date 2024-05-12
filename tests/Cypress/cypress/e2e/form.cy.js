@@ -1,4 +1,4 @@
-import {INVALID_EMAIL, INVALID_PASSWORD, standURL, VALID_EMAIL, VALID_PASSWORD} from "../../utils";
+import {INVALID_EMAIL, INVALID_PASSWORD, standURL, VALID_EMAIL, VALID_PASSWORD} from "../../utils.mjs";
 
 describe('form', () => {
     beforeEach(() => {

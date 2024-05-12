@@ -7,7 +7,7 @@ export const INVALID_EMAIL = 'email'
 export const VALID_PASSWORD = '123qwery'
 export const INVALID_PASSWORD = '123'
 
-export const getOrigin = (urlStr: string) => {
+export const getOrigin = (urlStr) => {
     const url = new URL(urlStr);
     return url.origin;
 }
