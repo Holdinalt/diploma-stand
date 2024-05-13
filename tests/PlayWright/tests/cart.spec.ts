@@ -1,4 +1,4 @@
-import {expect, test} from "@playwright/test";
+import {expect, test} from "@playwright/experimental-ct-react";
 import {standURL} from "../../utlis";
 
 test.beforeEach(async ({ page }) => {
@@ -30,7 +30,7 @@ test('some in cart', async ({ page }) => {
 
     await page.getByTestId('cart-page-button').click();
     const cartList = page.getByTestId('cart-list');
-    const cards = cartList.locator('[nacme="cart-item"]')
+    const cards = cartList.locator('[name="cart-item"]')
 
     await expect(cards).toHaveCount(2)
     await expect(page.getByTestId('cart-total-number')).toHaveText('$150')

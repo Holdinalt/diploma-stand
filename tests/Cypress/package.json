@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx cypress run --spec 'cypress/e2e/*.cy.js'"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

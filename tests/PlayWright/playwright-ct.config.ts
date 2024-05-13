@@ -5,6 +5,8 @@ import { defineConfig, devices } from '@playwright/experimental-ct-react';
  */
 export default defineConfig({
 
+  snapshotPathTemplate: '{testDir}/__screenshots__/{testFilePath}/{arg}{ext}',
+
   testDir: './',
   /* The base directory, relative to the config file, for snapshot files created with toMatchSnapshot and toHaveScreenshot. */
   snapshotDir: './__snapshots__',
@@ -17,7 +19,7 @@ export default defineConfig({
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
-  // workers: 5,
+  workers: 1,
   // workers: 10,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
